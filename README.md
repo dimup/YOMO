@@ -55,14 +55,17 @@
 + Optimizer와 Hyper parameters를 다음과 같이 설정한 뒤 학습을 진행했습니다.
   + Optimizer : Adam optimizer
   + Learning rate : 1e-4 ~ 1e-6
-  + Epochs : 50
-  + Batch size : 8
+  + Epochs : 105
+  + Batch size : 4
 
-**4. Testing**
-+ 아래와 같이
+**4. 모자이크 처리**
++ 탐지 결과가 일정 confidence 값 이상을 넘는 경우 blur() 함수로 모자이크 처리를 진행햇습니다.
 
-### 구현 모델의 인식 결과를 가공 및 정리하는 코드 구현
-**1. 인식 결과 가공**
-+ 토큰 형태로 반환되는 결과를 다시 단어들로 결합합니다.
-  + SentencePiece tokenization의 구분자인 '▁'를 활용했습니다.
+**5. 테스트**
++ 아래와 같이 테스트용 영상을 촬영하고, 모델에 입력하여 결과를 확인했습니다.
+![yy (1)](https://user-images.githubusercontent.com/46772883/114372360-6d02f780-9bbc-11eb-851a-606ab16a38d1.gif)
+
+## 시연 영상
++ 차 번호판을 모자이크 처리하고, 완성된 영상을 다운로드 받는 시연 영상입니다.
+![siyeon (2)](https://user-images.githubusercontent.com/46772883/114372684-c66b2680-9bbc-11eb-8232-9491561ac2f7.gif)
 
